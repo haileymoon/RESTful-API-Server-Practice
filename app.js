@@ -6,9 +6,13 @@ const mongoose = require('mongoose')
 require('dotenv/config')
 //Import Routes
 const postsRoute = require('./routes/posts'); //routes폴더의 posts파일로 경로 설정
-// 아래 라인으로 인해 posts.js에서 /post를 빼도 됨
-app.use('/posts', postsRoute); // middleware, if /posts get hit, make sure to use the postRoute
+const bodyParser = require('body-parser');
 
+// everytime it hits any request, make sure to use body-parser
+app.use(bodyParser.json())
+
+// middleware, if /posts get hit, make sure to use the postRoute
+app.use('/posts', postsRoute); 
 
 //ROUTES
 app.get('/',(req, res) => {
