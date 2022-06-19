@@ -16,7 +16,7 @@ const PostSchema = mongoose.Schema({
         type: Date,
         default: Date.now
     }
-})
+});
 
 //also needs export but model function needs[name_prefered for this model, schema to be used]
 module.exports = mongoose.model('Posts', PostSchema);

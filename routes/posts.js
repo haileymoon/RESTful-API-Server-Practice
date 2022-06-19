@@ -10,7 +10,19 @@ router.get('/',(req, res)=>{
 
 router.post('/',(req, res)=>{
     //post 하려는 것의 information, 즉 body에 접근해야함
-    console.log(req.body);
+    const post = new Post({ // new Post는 우리가 위에서 const로 정의해준 모델에 맞는 변수를 만드는 것
+        title: req.body.title,
+        description: req.body.description
+    });
+    // 이 post라는 객체를 db에 저장
+    post.save()
+        .then(data => {
+        //screen에 저장한 데이터 표기하도록
+            res.json(data);
+        })
+        .catch(err =>{
+            res.json({message : err});
+        });
 });
 
 

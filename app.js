@@ -24,7 +24,7 @@ mongoose.connect(
     process.env.DB_CONNECTION,
     ()=>{
     console.log('connected to DB!')
-})
+});
 
 // boot up the server by listening
 app.listen(3000);
