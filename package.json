@@ -1,0 +1,23 @@
+{
+  "name": "restful-api-server-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haileymoon/RESTful-API-Server-Practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haileymoon/RESTful-API-Server-Practice/issues"
+  },
+  "homepage": "https://github.com/haileymoon/RESTful-API-Server-Practice#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
